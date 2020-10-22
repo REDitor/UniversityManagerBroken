@@ -12,12 +12,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import jfxtras.styles.jmetro.JMetro;
-import jfxtras.styles.jmetro.Style;
 import nl.inholland.universitymanager.data.Database;
 import nl.inholland.universitymanager.models.Group;
 import nl.inholland.universitymanager.models.Student;
-import nl.inholland.universitymanager.ui.scenes.StyledScene;
+import nl.inholland.universitymanager.ui.StyledScene;
 
 public class StudentAddDialog {
     private Stage stage;

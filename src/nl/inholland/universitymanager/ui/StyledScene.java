@@ -1,4 +1,4 @@
-package nl.inholland.universitymanager.ui.scenes;
+package nl.inholland.universitymanager.ui;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;

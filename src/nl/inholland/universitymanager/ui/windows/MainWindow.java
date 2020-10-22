@@ -7,11 +7,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import jfxtras.styles.jmetro.JMetro;
-import jfxtras.styles.jmetro.Style;
-import nl.inholland.universitymanager.ui.scenes.StudentListScene;
-import nl.inholland.universitymanager.ui.scenes.StyledScene;
-import nl.inholland.universitymanager.ui.scenes.TeacherListScene;
+import nl.inholland.universitymanager.ui.views.StudentListView;
+import nl.inholland.universitymanager.ui.StyledScene;
+import nl.inholland.universitymanager.ui.views.TeacherListView;
 
 public class MainWindow {
     private Stage stage;
@@ -41,24 +39,19 @@ public class MainWindow {
         studentsButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                StudentListScene sl = new StudentListScene();
-                layout.getChildren().remove(1);
-                layout.getChildren().add(sl.getScene().getRoot());
+                layout.getChildren().set(1, new StudentListView());
             }
         });
 
         teachersButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                TeacherListScene tl = new TeacherListScene();
-                layout.getChildren().remove(1);
-                layout.getChildren().add(tl.getScene().getRoot());
+                layout.getChildren().set(1, new TeacherListView());
             }
         });
 
-        // Add the subscene. Default view will be the student list view
-        StudentListScene sl = new StudentListScene();
-        layout.getChildren().addAll(menu, sl.getScene().getRoot());
+        // Add the menu and the view. Default view will be the student list view
+        layout.getChildren().addAll(menu, new StudentListView());
 
         // Create the main scene
         Scene mainScene = new StyledScene(layout);

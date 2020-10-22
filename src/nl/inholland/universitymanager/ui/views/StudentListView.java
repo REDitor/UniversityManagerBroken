@@ -1,4 +1,4 @@
-package nl.inholland.universitymanager.ui.scenes;
+package nl.inholland.universitymanager.ui.views;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ChangeListener;
@@ -21,18 +21,13 @@ import nl.inholland.universitymanager.ui.dialogs.GradeAddDialog;
 import nl.inholland.universitymanager.ui.dialogs.StudentAddDialog;
 
 
-public class StudentListScene {
+public class StudentListView extends HBox {
 
-    private Scene scene;
     private Database db;
     private ObservableList<Student> students;
     private ObservableList<Grade> studentGrades;
 
-    public Scene getScene() {
-        return scene;
-    }
-
-    public StudentListScene() {
+    public StudentListView() {
 
         // Initialize data
         db = new Database();
@@ -41,9 +36,8 @@ public class StudentListScene {
 
         // Setup the layout. 2 tables next to eachother with forms below
         // students on the left, grades on the right
-        HBox layout = new HBox();
-        layout.setPadding(new Insets(20));
-        layout.setSpacing(20);
+        this.setPadding(new Insets(20));
+        this.setSpacing(20);
 
         // The student pane
         VBox studentPane = new VBox();
@@ -149,9 +143,6 @@ public class StudentListScene {
 
 
         // Adding the student and grade panes to the global layout
-        layout.getChildren().addAll(studentPane, gradePane);
-
-        // Creating a new scene
-        scene = new StyledScene(layout);
+        this.getChildren().addAll(studentPane, gradePane);
     }
 }

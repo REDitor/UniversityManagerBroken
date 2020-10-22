@@ -1,4 +1,4 @@
-package nl.inholland.universitymanager.ui.scenes;
+package nl.inholland.universitymanager.ui.views;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,32 +8,24 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import jfxtras.styles.jmetro.JMetro;
-import jfxtras.styles.jmetro.Style;
 import nl.inholland.universitymanager.data.Database;
 import nl.inholland.universitymanager.models.Teacher;
+import nl.inholland.universitymanager.ui.StyledScene;
 
-public class TeacherListScene {
+public class TeacherListView extends VBox {
 
     // This is just a mess that is there for filler. Has nothing to do with the assignments ;)
-
-    private Scene scene;
 
     private TableView<Teacher> table = new TableView<>();
     private Database db;
 
-    public Scene getScene() {
-        return scene;
-    }
-
-    public TeacherListScene() {
+    public TeacherListView() {
 
         db = new Database();
 
         ObservableList<Teacher> data = FXCollections.observableArrayList(db.getTeachers());
 
-        VBox layout = new VBox();
-        layout.setPadding(new Insets(20));
+        this.setPadding(new Insets(20));
 
         Label heading = new Label();
         heading.setText("Teachers");
@@ -73,8 +65,6 @@ public class TeacherListScene {
         Button deleteTeacherButton = new Button("Delete Teacher");
         studentMenu.getChildren().addAll(addTeacherButton, editTeacherButton, deleteTeacherButton);
 
-        layout.getChildren().addAll(heading, table, studentMenu);
-
-        scene = new StyledScene(layout);
+        this.getChildren().addAll(heading, table, studentMenu);
     }
 }
