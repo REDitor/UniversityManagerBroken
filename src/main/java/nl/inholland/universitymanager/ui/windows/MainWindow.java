@@ -4,11 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import nl.inholland.universitymanager.ui.views.StudentListView;
 import nl.inholland.universitymanager.ui.StyledScene;
+import nl.inholland.universitymanager.ui.views.StudentListView;
 import nl.inholland.universitymanager.ui.views.TeacherListView;
 
 public class MainWindow {

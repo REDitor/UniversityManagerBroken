@@ -1,19 +1,18 @@
 package nl.inholland.universitymanager.ui.views;
 
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.*;
-import jfxtras.styles.jmetro.JMetro;
-import jfxtras.styles.jmetro.Style;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import nl.inholland.universitymanager.data.Database;
 import nl.inholland.universitymanager.models.Grade;
 import nl.inholland.universitymanager.models.Student;

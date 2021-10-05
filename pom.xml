@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>nl.inholland</groupId>
+    <artifactId>university-manager</artifactId>
+    <version>1.0-broken</version>
+
+    <name>Broken University Manager</name>
+    <description>JavaFX project University Manager Broken</description>
+    <developers>
+        <developer>
+            <name>Mark de Haan</name>
+            <email>Mark.deHaan@inholland.nl</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Wim Wiltenburg</name>
+            <email>willem.wiltenburg@inholland.nl</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>EPL 2.0</name>
+            <url>https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <javafx.version>17</javafx.version>
+        <javafx-maven-plugin.version>0.0.7</javafx-maven-plugin.version>
+        <mavenfx.mainClass>nl.inholland.universitymanager.App</mavenfx.mainClass>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx</artifactId>
+            <version>${javafx.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jfxtras</groupId>
+            <artifactId>jmetro</artifactId>
+            <version>11.6.15</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <!-- TODO: create runnable jar -->
+        <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>${javafx-maven-plugin.version}</version>
+                <configuration>
+                    <mainClass>${mavenfx.mainClass}</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+</project>
