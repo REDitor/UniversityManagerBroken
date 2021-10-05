@@ -13,7 +13,6 @@ public class StyledScene extends Scene {
 
         JMetro jMetro = new JMetro(Style.LIGHT);
         jMetro.setScene(this);
-        jMetro.setAutomaticallyColorPanes(true);
-        this.getStylesheets().add("resources/css/style.css");
+        this.getStylesheets().add("css/style.css");
     }
 }

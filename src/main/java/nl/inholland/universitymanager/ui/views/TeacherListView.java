@@ -3,14 +3,16 @@ package nl.inholland.universitymanager.ui.views;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import nl.inholland.universitymanager.data.Database;
 import nl.inholland.universitymanager.models.Teacher;
-import nl.inholland.universitymanager.ui.StyledScene;
 
 public class TeacherListView extends VBox {
 
