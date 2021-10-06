@@ -119,6 +119,8 @@ public class StudentListView extends HBox {
 
         gradeTableView.getColumns().addAll(courseCol, gradeCol);
 
+        //
+
         // Adding the buttons for the grades
         HBox gradeMenu = new HBox();
         gradeMenu.setPadding(new Insets(20,0,0,0));
@@ -140,6 +142,9 @@ public class StudentListView extends HBox {
         gradePane.getChildren().addAll(gradeheading, gradeTableView, gradeMenu);
         studentPane.getChildren().addAll(heading, studentTableView, studentMenu);
 
+        //region Assignment 1
+        //FIXME: Show grades on right when student is clicked
+        //endregion
 
         // Adding the student and grade panes to the global layout
         this.getChildren().addAll(studentPane, gradePane);

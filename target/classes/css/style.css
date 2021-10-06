@@ -1,0 +1,11 @@
+.menu
+{
+    -fx-background-color: #00325a;
+}
+
+.menu .button{
+    -fx-text-fill: white;
+    -fx-background-color: #123d69;
+    -fx-padding: 5px;
+    -fx-font-size: 18;
+}
